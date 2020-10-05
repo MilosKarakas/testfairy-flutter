@@ -397,11 +397,10 @@ class _TestFairyClientHttpRequest implements HttpClientRequest {
     this.wrappedRequest.writeln(obj);
   }
 
-  /** Modern Flutter
-  @Since("2.10")
   @override
-  void abort([Object? exception, StackTrace? stackTrace]) {
-    this.wrappedRequest.abort(exception, stacktrace);
+  void abort([Object exception, StackTrace stackTrace]) {
+    if (exception!=null && stackTrace!=null) {
+      this.wrappedRequest.abort(exception, stackTrace);
+    }
   }
-  Modern Flutter **/
 }
