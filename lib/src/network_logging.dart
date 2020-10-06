@@ -398,6 +398,7 @@ class _TestFairyClientHttpRequest implements HttpClientRequest {
     this.wrappedRequest.writeln(obj);
   }
 
+  //new
   @override
   void abort([Object exception, StackTrace stackTrace]) {
     if (exception!=null && stackTrace!=null) {
