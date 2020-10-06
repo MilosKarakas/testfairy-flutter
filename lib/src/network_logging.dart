@@ -398,10 +398,11 @@ class _TestFairyClientHttpRequest implements HttpClientRequest {
     this.wrappedRequest.writeln(obj);
   }
 
+  /*
   @override
   void abort([Object exception, StackTrace stackTrace]) {
     if (exception!=null && stackTrace!=null) {
       this.wrappedRequest.abort(exception, stackTrace);
     }
-  }
+  } */
 }
