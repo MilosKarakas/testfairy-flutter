@@ -222,6 +222,16 @@ class _TestFairyHttpClient implements TestFairyHttpClient {
       return _TestFairyClientHttpRequest(req);
     });
   }
+
+  @override
+  set connectionFactory(Future<ConnectionTask<Socket>> Function(Uri url, String? proxyHost, int? proxyPort)? f) {
+    wrappedClient.connectionFactory = f;
+  }
+
+  @override
+  set keyLog(Function(String line)? callback) {
+    wrappedClient.keyLog = callback;
+  }
 }
 
 class _TestFairyClientHttpRequest implements HttpClientRequest {
